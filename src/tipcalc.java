@@ -3,7 +3,7 @@ public class tipcalc {
     public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     //User input here
-    System.out.print("Please input your total bill: ");
+    System.out.print("Please input your total bill: $");
     double bill = s.nextDouble();
     System.out.println();
     System.out.print("Please input your tip percentage: ");
@@ -19,11 +19,11 @@ public class tipcalc {
     double billTotal = bill + tipAmount;
     double billSplit = billTotal/personCount;
     //Display
-    System.out.println("Total bill: " + Math.round((billTotal*100.0)/100.0));
-    System.out.println("Total tip: " + Math.round((tipAmount*100.0)/100.0));
+    System.out.println("Total bill: $" + Math.round(billTotal*100.0)/100.0);
+    System.out.println("Total tip: $" + Math.round(tipAmount*100.0)/100.0);
     System.out.println("");
-    System.out.println("Total per person: " + Math.round((billSplit*100.0)/100.0));
-    System.out.println("Tip per person: " + Math.round((tipPerPerson*100.0)/100.0));
+    System.out.println("Total per person: $" + Math.round(billSplit*100.0)/100.0);
+    System.out.println("Tip per person: $" + Math.round(tipPerPerson*100.0)/100.0);
 
 
 
