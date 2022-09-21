@@ -19,7 +19,13 @@ public class tipcalc {
     double billTotal = bill + tipAmount;
     double billSplit = billTotal/personCount;
     //Display
-    System.out.println("Total bill: " + billTotal);
+    System.out.println("Total bill: " + Math.round((billTotal*100.0)/100.0));
+    System.out.println("Total tip: " + Math.round((tipAmount*100.0)/100.0));
+    System.out.println("");
+    System.out.println("Total per person: " + Math.round((billSplit*100.0)/100.0));
+    System.out.println("Tip per person: " + Math.round((tipPerPerson*100.0)/100.0));
+
+
 
 
     }
