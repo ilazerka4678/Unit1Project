@@ -1,7 +1,9 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 public class tipcalc {
     public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat("###.00");
     //User input here
     System.out.print("Please input your total bill: $");
     double bill = s.nextDouble();
@@ -19,11 +21,11 @@ public class tipcalc {
     double billTotal = bill + tipAmount;
     double billSplit = billTotal/personCount;
     //Display
-    System.out.println("Total bill: $" + Math.round(billTotal*100.0)/100.0);
-    System.out.println("Total tip: $" + Math.round(tipAmount*100.0)/100.0);
+    System.out.println("Total bill: $" + (df.format(Math.round(billTotal*100.0)/100.0)));
+    System.out.println("Total tip: $" + (df.format(Math.round(tipAmount*100.0)/100.0)));
     System.out.println();
-    System.out.println("Total per person: $" + Math.round(billSplit*100.0)/100.0);
-    System.out.println("Tip per person: $" + Math.round(tipPerPerson*100.0)/100.0);
+    System.out.println("Total per person: $" + (df.format(Math.round(billSplit*100.0)/100.0)));
+    System.out.println("Tip per person: $" + (df.format(Math.round(tipPerPerson*100.0)/100.0)));
 
 
 
